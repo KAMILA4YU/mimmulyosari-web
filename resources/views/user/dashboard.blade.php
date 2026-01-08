@@ -4,7 +4,6 @@
 
 @section('content')
 <style>
-    /* === DASHBOARD MODERN AESTHETIC === */
 
     .dashboard-wrapper {
         padding-top: 10px;
@@ -78,7 +77,7 @@
 
 <div class="container dashboard-wrapper">
 
-    {{-- Header Dashboard --}}
+    <!-- header -->
     <div class="container mt-3">
     <h2 class="dashboard-title fw-bold mb-3">
         Halo, {{ Auth::user()->name }}
@@ -88,10 +87,10 @@
     </p>
     </div>
 
-    {{-- GRID MENU --}}
+    <!-- grid -->
     <div class="row g-2 mt-3">
 
-        {{-- Profil --}}
+        <!-- profil -->
         <div class="col-12 col-sm-6 col-lg-3">
             <div class="feature-card">
                 <i class="bi bi-person-circle feature-icon text-success"></i>
@@ -102,7 +101,7 @@
             </div>
         </div>
 
-        {{-- PPDB --}}
+        <!-- ppdb -->
         <div class="col-12 col-sm-6 col-lg-3">
             <div class="feature-card">
                 <i class="bi bi-file-earmark-text feature-icon text-primary"></i>
@@ -113,7 +112,7 @@
             </div>
         </div>
 
-        {{-- Hasil --}}
+        <!-- hasil -->
         <div class="col-12 col-sm-6 col-lg-3">
             <div class="feature-card">
                 <i class="bi bi-clipboard-check feature-icon text-info"></i>
@@ -124,7 +123,7 @@
             </div>
         </div>
 
-        {{-- Pengaduan --}}
+        <!-- pengaduan -->
         <div class="col-12 col-sm-6 col-lg-3">
             <div class="feature-card">
                 <i class="bi bi-chat-dots feature-icon text-danger"></i>

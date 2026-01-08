@@ -79,7 +79,7 @@
         Tahun Ajaran 2025 / 2026
     </p>
 
-    <!-- A. IDENTITAS CALON SISWA -->
+    <!-- identitas calon siswa -->
     <table>
         <tr>
             <th colspan="2" class="section-title">A. IDENTITAS CALON SISWA</th>

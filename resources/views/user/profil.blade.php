@@ -31,14 +31,14 @@
                             width="150" height="150"
                             style="object-fit:cover;">
 
-                        <!-- EDIT -->
+                        <!-- edit -->
                         <label for="foto"
                             class="position-absolute bottom-0 end-0 bg-primary text-white rounded-circle d-flex justify-content-center align-items-center"
                             style="width:36px; height:36px; cursor:pointer;">
                             <i class="bi bi-pencil"></i>
                         </label>
 
-                        <!-- DELETE -->
+                        <!-- delete -->
                         @if($user->foto)
                         <button type="button"
                             class="position-absolute bottom-0 start-0 bg-danger text-white rounded-circle border-0"

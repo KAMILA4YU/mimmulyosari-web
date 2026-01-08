@@ -3,21 +3,21 @@
 @section('content')
 <div class="container-fluid">
 
-    {{--   JUDUL HALAMAN   --}}
+    <!-- judul halaman -->
     <div class="d-flex align-items-center justify-content-between mb-4">
         <h4 class="fw-bold text-primary mb-0">
             Data Pendaftar PPDB
         </h4>
     </div>
 
-    {{--   CARD WRAPPER TABEL   --}}
+    <!-- card wrapped -->
     <div class="card shadow-sm border-0 rounded-3">
         <div class="card-body">
 
         <form method="GET" action="{{ route('admin.ppdb.pendaftar') }}"
               class="row g-2 mb-3 align-items-end">
 
-            {{-- STATUS --}}
+            <!-- status -->
             <div class="col-md-3">
                 <label class="form-label fw-semibold">Status</label>
                 <select name="status" class="form-select">
@@ -28,7 +28,7 @@
                 </select>
             </div>
 
-            {{-- BULAN --}}
+            <!-- bulan -->
             <div class="col-md-3">
                 <label class="form-label fw-semibold">Bulan</label>
                 <select name="bulan" class="form-select">
@@ -41,7 +41,7 @@
                 </select>
             </div>
 
-            {{-- TAHUN --}}
+            <!-- tahun -->
             <div class="col-md-3">
                 <label class="form-label fw-semibold">Tahun</label>
                 <select name="tahun" class="form-select">
@@ -54,7 +54,7 @@
                 </select>
             </div>
 
-            {{-- BUTTON --}}
+            <!-- button -->
             <div class="col-md-3 d-flex gap-2">
                 <button class="btn btn-primary w-100">
                     <i class="bi bi-filter"></i> Filter
@@ -125,11 +125,11 @@
                                 </span>
                             </td>
 
-                            {{-- BUTTON AKSI --}}
+                            <!-- button aksi -->
                             <td class="text-center">
                                 <div class="d-grid d-md-flex gap-2 justify-content-center">
 
-                                    {{-- DETAIL --}}
+                                    <!-- detail -->
                                     <a href="{{ route('admin.ppdb.detail', $p->id) }}"
                                     class="btn btn-info btn-sm aksi-btn">
                                         <i class="bi bi-eye-fill"></i>
@@ -138,7 +138,7 @@
 
                                     @if($p->status == 'pending')
 
-                                        {{-- VERIFIKASI --}}
+                                        <!-- verifikasi -->
                                         <form action="{{ route('admin.ppdb.verifikasi', $p->id) }}" method="POST">
                                             @csrf
                                             <button class="btn btn-success btn-sm aksi-btn">
@@ -147,7 +147,7 @@
                                             </button>
                                         </form>
 
-                                        {{-- TOLAK --}}
+                                        <!-- tolak -->
                                         <form action="{{ route('admin.ppdb.tolak', $p->id) }}" method="POST">
                                             @csrf
                                             <button class="btn btn-danger btn-sm aksi-btn">
@@ -184,10 +184,9 @@
 
 </div>
 <style>
-    /* SERAGAMKAN BUTTON AKSI */
 .aksi-btn {
-    width: 110px;        /* 🔥 semua sama lebar */
-    height: 38px;        /* 🔥 tinggi sama */
+    width: 110px;        
+    height: 38px;        
     padding: 6px 0;
     
     display: flex;
@@ -195,13 +194,12 @@
     justify-content: center;
     gap: 6px;
 
-    border-radius: 8px; /* sudut sama */
+    border-radius: 8px; 
     font-size: 13px;
     font-weight: 500;
     white-space: nowrap;
 }
 
-/* Icon biar konsisten */
 .aksi-btn i {
     font-size: 14px;
 }

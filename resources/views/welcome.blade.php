@@ -515,7 +515,7 @@
     to { transform: translateX(-100%); }
 }
 
-  /* ===== FOOTER ===== */
+  /* FOOTER */
   footer {
     font-size: .9rem;
   }
@@ -526,7 +526,7 @@
 
   @include('partials.navbar')
 
-  {{-- HERO --}}
+  <!-- hero -->
   <section class="hero">
     <div class="container">
       <h1>{{ $home->judul_hero }}</h1>
@@ -538,35 +538,35 @@
     </div>
   </section>
 
-@if($home && $home->ppdb_status === 'dibuka')
-<div class="ppdb-floating shadow">
-    <button class="close-btn" onclick="this.parentElement.style.display='none'">
-        <i class="bi bi-x-lg"></i>
-    </button>
+  @if($home && $home->ppdb_status === 'dibuka')
+    <div class="ppdb-floating shadow">
+        <button class="close-btn" onclick="this.parentElement.style.display='none'">
+            <i class="bi bi-x-lg"></i>
+        </button>
 
-    <div class="ppdb-floating-content">
-        <div class="ppdb-marquee">
-    <span>📢 PPDB {{ $home->ppdb_periode }} TELAH DIBUKA • {{ $home->ppdb_gelombang }}</span>
-</div>
-
-
-        <h6 class="fw-bold mb-2">
-            PPDB {{ $home->ppdb_periode }}
-        </h6>
-
-        <p class="mb-2 small">
-            {{ $home->ppdb_keterangan }}
-        </p>
-
-        <span class="badge bg-primary">
-            {{ $home->ppdb_gelombang }}
-        </span>
+        <div class="ppdb-floating-content">
+            <div class="ppdb-marquee">
+        <span>📢 PPDB {{ $home->ppdb_periode }} TELAH DIBUKA • {{ $home->ppdb_gelombang }}</span>
     </div>
-</div>
-@endif
 
 
-  {{-- SAMBUTAN KEPALA SEKOLAH --}}
+          <h6 class="fw-bold mb-2">
+              PPDB {{ $home->ppdb_periode }}
+          </h6>
+
+          <p class="mb-2 small">
+              {{ $home->ppdb_keterangan }}
+          </p>
+
+          <span class="badge bg-primary">
+              {{ $home->ppdb_gelombang }}
+          </span>
+      </div>
+  </div>
+  @endif
+
+
+  <!-- sambutan -->
   <section id="sambutan" class="py-5 bg-light">
     <div class="container">
       <h2 class="text-center fw-bold text-success mb-4">KABAR TERKINI</h2>
@@ -589,7 +589,7 @@
     </div>
   </section>
 
-  {{-- PROFIL --}}
+  <!-- profil -->
   <section id="profil" class="py-5 text-center bg-white">
     <div class="container">
       <h2 class="mb-3 text-success">{{ $home->judul_tentang }}</h2>
@@ -601,7 +601,7 @@
     </div>
   </section>
 
-  {{-- ARTIKEL --}}
+  <!-- artikel -->
   <section id="artikel" class="py-5 bg-light">
     <div class="container">
       <h2 class="text-center text-success mb-4">Artikel & Berita</h2>
@@ -626,7 +626,7 @@
     </div>
   </section>
 
-  {{-- STATISTIK SEKOLAH --}}
+  <!-- statistik -->
   <section id="statistik" class="py-5 bg-white">
     <div class="container">
       <div class="row text-center g-4">
@@ -659,7 +659,7 @@
     </div>
   </section>
 
-  {{-- GALERI --}}
+  <!-- galeri -->
   <section id="galeri" class="py-5">
   <div class="container text-center">
 
@@ -685,7 +685,7 @@
 </section>
 
 
-  {{-- KONTAK --}}
+  <!-- kontak -->
   <section id="kontak" class="py-5 bg-white">
     <div class="container">
       <h2 class="text-success fw-bold text-center mb-5">Hubungi Kami</h2>
@@ -725,7 +725,7 @@
     </div>
   </section>
 
-  {{-- FOOTER RINGKAS --}}
+  <!-- footer -->
   <section class="py-5 text-white" style="background:#1f3a4c;">
     <div class="container">
       <div class="row g-4">

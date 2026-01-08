@@ -3,14 +3,14 @@
 @section('content')
 <div class="container-fluid">
 
-    {{--   JUDUL HALAMAN   --}}
+    <!-- judul halaman -->
     <div class="d-flex align-items-center justify-content-between mb-4">
         <h4 class="fw-bold text-primary mb-0">
             Semua Berkas Pendaftar
         </h4>
     </div>
 
-    {{--  CARD LIST BERKAS   --}}
+    <!-- card list berkas -->
     <div class="card shadow-sm border-0 rounded-3">
         <div class="card-body">
             <a href="{{ route('admin.ppdb.cetak-semua', request()->only(['bulan','tahun'])) }}"
@@ -21,7 +21,7 @@
             <form method="GET" action="{{ route('admin.ppdb.berkas') }}"
                 class="row g-2 mb-3 align-items-end">
 
-                {{-- BULAN --}}
+                <!-- bulan -->
                 <div class="col-md-3">
                     <label class="form-label fw-semibold">Bulan</label>
                     <select name="bulan" class="form-select">
@@ -34,7 +34,7 @@
                     </select>
                 </div>
 
-                {{-- TAHUN --}}
+                <!-- tahun -->
                 <div class="col-md-3">
                     <label class="form-label fw-semibold">Tahun</label>
                     <select name="tahun" class="form-select">
@@ -47,7 +47,7 @@
                     </select>
                 </div>
 
-                {{-- BUTTON --}}
+                <!-- button -->
                 <div class="col-md-3 d-flex gap-2">
                     <button class="btn btn-primary w-100">
                         <i class="bi bi-filter"></i> Filter

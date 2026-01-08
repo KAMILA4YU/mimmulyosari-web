@@ -5,7 +5,7 @@
 @section('content')
 <div class="container mt-4">
 
-    {{-- ALERT SUCCESS --}}
+    <!-- alert -->
     @if(session('success'))
         <div class="alert alert-success alert-dismissible fade show rounded-3" role="alert">
             <i class="bi bi-check-circle-fill me-1"></i>
@@ -14,7 +14,6 @@
         </div>
     @endif
 
-    {{-- ALERT ERROR --}}
     @if(session('error'))
         <div class="alert alert-danger alert-dismissible fade show rounded-3" role="alert">
             <i class="bi bi-exclamation-triangle-fill me-1"></i>
@@ -30,10 +29,10 @@
                 <i class="bi bi-clipboard-check"></i> Status Pendaftaran PPDB
             </h2>
 
-            {{-- Jika sudah daftar --}}
+            <!-- jika sudah mendaftar -->
             @if($ppdb)
 
-                {{-- STATUS --}}
+                <!-- status -->
                 <div class="
                     alert 
                     @if($ppdb->status == 'pending') alert-warning
@@ -55,7 +54,7 @@
                     @endif
                 </div>
 
-                {{-- CARD DATA DETAIL --}}
+                <!-- card data detail -->
                 <div class="card mt-4 shadow-sm border-0">
                     <div class="card-header bg-primary text-white fw-bold">
                         Data Diri Calon Siswa
@@ -71,7 +70,7 @@
                     </div>
                 </div>
 
-                {{-- BERKAS --}}
+                <!-- berkas -->
                 <h4 class="fw-bold mt-4">Berkas yang Diupload</h4>
 
                 @if($ppdb->status_siswa === 'pindahan')
@@ -95,7 +94,7 @@
 
                                         <div class="d-flex flex-column flex-md-row align-items-start">
 
-                                            {{-- TEKS PESAN --}}
+                                            <!-- pesan teks -->
                                             <div class="flex-grow-1 pe-md-3">
                                                 {{ $pesan->pesan }}
                                                 <br>
@@ -104,7 +103,7 @@
                                                 </small>
                                             </div>
 
-                                            {{-- TOMBOL --}}
+                                            <!-- button -->
                                             <form action="{{ route('user.ppdb.pesan.read', $pesan->id) }}"
                                                 method="POST"
                                                 class="ms-md-2
@@ -143,7 +142,7 @@
                     </thead>
                     <tbody>
 
-                        {{-- AKTA KELAHIRAN --}}
+                        <!-- akta kelahiran -->
                         <tr>
                             <td>
                                 FC Akta Kelahiran
@@ -169,7 +168,7 @@
                             </td>
                         </tr>
 
-                        {{-- KARTU KELUARGA --}}
+                        <!-- kartu keluarga -->
                         <tr>
                             <td>
                                 FC Kartu Keluarga
@@ -195,7 +194,7 @@
                             </td>
                         </tr>
 
-                        {{-- FOTO SISWA --}}
+                        <!-- foto siswa -->
                         <tr>
                             <td>
                                 Pas Foto Siswa 3&times;4
@@ -221,7 +220,7 @@
                             </td>
                         </tr>
 
-                        {{-- IJAZAH TK --}}
+                        <!-- ijazah tk -->
                         <tr>
                             <td>
                                 FC Ijazah TK
@@ -255,7 +254,7 @@
                             </td>
                         </tr>
 
-                        {{-- SURAT PINDAHAN (KHUSUS SISWA PINDAHAN) --}}
+                        <!-- surat pindahan bagi siswa pindahan -->
                         @if($ppdb->status_siswa === 'pindahan')
                         <tr>
                             <td>
@@ -296,7 +295,7 @@
                         </tr>
                         @endif
 
-                        {{-- PIAGAM --}}
+                        <!-- piagam -->
                         <tr>
                             <td>
                                 Piagam
@@ -330,7 +329,7 @@
                             </td>
                         </tr>
 
-                        {{-- KARTU SOSIAL --}}
+                        <!-- kartu sosial -->
                         <tr>
                             <td>
                                 FC Kartu Sosial (KIS / PKH / KKS)
@@ -480,7 +479,7 @@
                                             justify-content-between align-items-start align-items-sm-center
                                             gap-3">
 
-                                    {{-- KIRI: ICON + TEKS --}}
+                                    <!-- hanya teks -->
                                     <div class="d-flex align-items-start gap-2">
                                         <i class="bi bi-file-earmark-pdf-fill fs-5 mt-1"></i>
                                         <div>
@@ -489,7 +488,7 @@
                                         </div>
                                     </div>
 
-                                    {{-- KANAN: TOMBOL --}}
+                                    <!-- tombol cetak -->
                                     <a href="{{ route('user.ppdb.cetak') }}"
                                     target="_blank"
                                     class="btn btn-primary btn-sm flex-shrink-0">
@@ -506,7 +505,7 @@
 
 
             @else
-                {{-- Belum daftar --}}
+                <!-- belum daftar -->
                 <div class="alert alert-warning rounded-3">
                     <h5 class="fw-bold mb-1">Belum Ada Pendaftaran</h5>
                     Kamu belum mengisi formulir PPDB.

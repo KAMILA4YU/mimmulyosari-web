@@ -10,8 +10,8 @@ use App\Http\Controllers\Admin\KesiswaanController;
 use App\Http\Controllers\Admin\BeritaController;
 use App\Http\Controllers\Admin\ArtikelController;
 use App\Http\Controllers\Admin\GaleriController;
-use App\Http\Controllers\Admin\KontakController as AdminKontakController; // admin
-use App\Http\Controllers\KontakController; // publik
+use App\Http\Controllers\Admin\KontakController as AdminKontakController; 
+use App\Http\Controllers\KontakController; 
 use App\Http\Controllers\Admin\PengaduanController as AdminPengaduanController;
 use App\Http\Controllers\Admin\PpdbController as AdminPpdbController;
 use App\Http\Controllers\PublicPpdbController;
@@ -34,11 +34,6 @@ use BaconQrCode\Renderer\RendererStyle\RendererStyle;
 use BaconQrCode\Renderer\Image\SvgImageBackEnd;
 use BaconQrCode\Writer;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-*/
 
 // Veirifkasi Email
     // Route::get('/email/verify/{id}/{hash}', VerifyEmailController::class)
@@ -56,7 +51,7 @@ use BaconQrCode\Writer;
     // ->name('verification.send');
 
 
-// 🔹 Halaman utama & publik
+// 🔹 Halaman utama & umum
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/profil-sekolah', [PublicProfilSekolahController::class, 'index'])
     ->name('profil.sekolah');
@@ -73,25 +68,25 @@ Route::get('/artikel/{id}', [ArtikelPublicController::class, 'show'])->name('art
 
 Route::get('/galeri', [GaleriController::class, 'showPublic'])->name('galeri');
 
-// 🔹 Kontak Publik
+// 🔹 Kontak umum
 Route::get('/kontak', [KontakPublicController::class, 'index'])->name('kontak.index');
 Route::post('/kontak/kirim', [KontakPublicController::class, 'store'])->name('kontak.kirim');
 
-// 🔹 Artikel Publik
+// 🔹 Artikel umum
 Route::get('/artikel', [ArtikelController::class, 'showPublic'])->name('artikel');
 Route::get('/artikel/{id}', [ArtikelController::class, 'showDetail'])->name('artikel.show');
 
 // 🔹 PPDB umum
 Route::get('/ppdb', [PublicPpdbController::class, 'index'])->name('ppdb.index');
 
-// 🔐 PPDB login wajib (dashboard user)
+// PPDB login wajib (dashboard user)
 Route::middleware(['auth'])->group(function () {
     Route::get('/ppdb/daftar', [UserPpdbController::class, 'form'])->name('ppdb.form');
     Route::post('/ppdb/daftar', [UserPpdbController::class, 'store'])->name('ppdb.store');
 });
 
 
-// 🔹 Dashboard & User Area
+// 🔹 Dashboard & User area
 Route::middleware(['auth', 'verified'])
     ->prefix('user')
     ->name('user.')
@@ -149,7 +144,6 @@ Route::middleware(['auth', 'verified'])
 
 });
 
-
 Route::get('/test-qr-svg', function () {
     $renderer = new ImageRenderer(
         new RendererStyle(200),
@@ -163,7 +157,7 @@ Route::get('/test-qr-svg', function () {
     )->header('Content-Type', 'image/svg+xml');
 });
 
-// 🔹 Dashboard ADMIN
+// 🔹 Dashboard Admin
 Route::middleware(['auth','isAdmin'])
     ->prefix('admin')
     ->name('admin.')
@@ -242,7 +236,7 @@ Route::middleware(['auth','isAdmin'])
         Route::put('/berita/{id}', [BeritaController::class, 'update'])->name('berita.update');
         Route::delete('/berita/{id}', [BeritaController::class, 'destroy'])->name('berita.destroy');
 
-        // Artikel CRUD admin
+        // Artikel CRUD 
         Route::get('/artikel', [ArtikelController::class, 'index'])->name('artikel');
         Route::post('/artikel/store', [ArtikelController::class, 'store'])->name('artikel.store');
         Route::put('/artikel/{id}', [ArtikelController::class, 'update'])->name('artikel.update');
@@ -267,7 +261,7 @@ Route::middleware(['auth','isAdmin'])
         Route::put('/info-kontak', [InfoKontakController::class, 'update'])
             ->name('info-kontak.update');
 
-        // Pengaduan Admin CRUD & Balasan
+        // Pengaduan CRUD & Balasan
         Route::get('pengaduan', [AdminPengaduanController::class, 'index'])->name('pengaduan.index');
         Route::get('pengaduan/{pengaduan}', [AdminPengaduanController::class, 'show'])->name('pengaduan.show');
         Route::put('pengaduan/{pengaduan}', [AdminPengaduanController::class, 'update'])->name('pengaduan.update');

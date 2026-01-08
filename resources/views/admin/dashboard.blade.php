@@ -2,11 +2,9 @@
 
 @section('content')
 <div class="container-fluid mt-4">
-
-    {{--   TITLE   --}}
     <h4 class="mb-4 fw-bold text-primary">Dashboard Admin</h4>
 
-    {{--   STATISTIC CARDS   --}}
+    <!-- statistik -->
     <div class="row g-4">
 
         <div class="col-md-3">
@@ -47,7 +45,7 @@
 
     </div>
 
-    {{--   CHART SECTION   --}}
+    <!-- chart session -->
     <div class="mt-5">
         <h5 class="fw-bold text-secondary mb-3">Statistik Sistem</h5>
 
@@ -60,7 +58,7 @@
 @endsection
 
 
-{{--  CHART SCRIPT   --}}
+<!-- chart script -->
 @push('scripts')
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -111,7 +109,6 @@
 @endpush
 
 
-{{--   CUSTOM CSS   --}}
 @push('styles')
 <style>
     .stats-card {
