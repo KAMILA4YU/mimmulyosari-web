@@ -131,14 +131,14 @@
 </head>
 <body>
 
-  {{-- Navbar --}}
+  <!-- navbar -->
   @include('partials.navbar')
 
   <div class="overlay">
     <div class="container-xl">
 
 
-      {{-- Tombol kembali --}}
+      <!-- tombol kembali -->
       <div class="mb-4">
         <a href="{{ route('artikel') }}" class="btn btn-outline-primary btn-back">
             <i class="bi bi-arrow-left"></i> Kembali ke Artikel
@@ -146,13 +146,9 @@
 
       </div>
 
-      {{-- CARD DETAIL --}}
       <div class="detail-card">
-
-        {{-- Judul --}}
         <h1 class="judul-artikel mb-3">{{ $artikel->judul }}</h1>
 
-        {{-- Info --}}
         <div class="sub-info mb-4">
           @if($artikel->penulis)
           <i class="bi bi-person"></i> {{ $artikel->penulis }} &nbsp;•&nbsp;
@@ -162,12 +158,10 @@
           {{ \Carbon\Carbon::parse($artikel->tanggal ?? $artikel->created_at)->translatedFormat('d F Y') }}
         </div>
 
-        {{-- Gambar --}}
         @if($artikel->gambar)
         <img src="{{ asset('storage/' . $artikel->gambar) }}" class="detail-img mb-4">
         @endif
 
-        {{-- Isi Artikel --}}
         <div class="content">
           {!! nl2br($artikel->isi) !!}
         </div>
@@ -177,13 +171,12 @@
     </div>
   </div>
 
-  {{-- Footer (tanpa margin-top biar nempel) --}}
   <footer class="bg-dark text-white text-center py-3">
     <small>© {{ date('Y') }} MI Muhammadiyah Mulyosari. All rights reserved.</small>
   </footer>
 
 
-  <!-- NAVBAR LOGIC -->
+  <!-- NAVBAR -->
   <script>
   document.addEventListener("DOMContentLoaded", function () {
     const navbar = document.querySelector(".custom-navbar");
