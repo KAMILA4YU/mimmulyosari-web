@@ -87,16 +87,16 @@
 </head>
 <body>
 
-  {{-- NAVBAR --}}
+  <!-- NAVBAR -->
   @include('partials.navbar')
 
-  {{-- OVERLAY WRAPPER --}}
+  <!-- OVERLAY WRAPPER -->
   <div class="overlay">
     <div class="container">
 
       <h1 class="page-title">Informasi Sekolah</h1>
 
-      {{-- ===================== PENGUMUMAN ===================== --}}
+      <!-- ===================== PENGUMUMAN ===================== -->
       <h3 class="section-title">Pengumuman</h3>
       <div class="list-group mb-5">
         @forelse($pengumuman as $item)
@@ -114,7 +114,7 @@
         @endforelse
       </div>
 
-      {{-- ===================== BERITA ===================== --}}
+      <!-- ===================== BERITA ===================== -->
       <h3 class="section-title">Berita Terbaru</h3>
       <div class="row g-4 mb-5">
         @forelse($berita as $item)
@@ -145,7 +145,7 @@
       </div>
 
 
-      {{-- ===================== AGENDA ===================== --}}
+      <!-- ===================== AGENDA ===================== -->
       <h3 class="section-title">Agenda Kegiatan</h3>
       <div class="table-responsive">
         <table class="table table-bordered shadow-sm bg-white">
@@ -165,7 +165,7 @@
     </div>
   </div>
 
-  {{-- FOOTER --}}
+  <!-- FOOTER -->
   <footer class="bg-dark text-white text-center py-3">
     <small>© {{ date('Y') }} MI Muhammadiyah Mulyosari. All rights reserved.</small>
   </footer>

@@ -29,7 +29,7 @@
                     <td class="text-center">
                         <div class="d-inline-flex gap-1">
 
-                            {{-- EDIT --}}
+                            <!-- EDIT -->
                             <button class="btn btn-outline-warning btn-sm btn-action"
                                 data-bs-toggle="modal"
                                 data-bs-target="#modalEditInformasi"
@@ -44,7 +44,7 @@
                                 <i class="bi bi-pencil-square"></i>
                             </button>
 
-                            {{-- HAPUS --}}
+                            <!-- HAPUS -->
                             <form action="{{ route('admin.informasi.destroy', $info->id) }}"
                                 method="POST"
                                 onsubmit="return confirm('Hapus informasi ini?')">

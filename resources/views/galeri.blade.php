@@ -11,7 +11,6 @@
 
   @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
@@ -81,7 +80,7 @@
       font-size: 19px;
       color: #1f3a4c;
       margin-top: 6px;
-      margin-bottom: 14px;   /* INI PENTING */
+      margin-bottom: 14px;
       line-height: 1.45;
     }
 
@@ -133,7 +132,7 @@
 </head>
 <body>
 
-  {{-- Navbar --}}
+  <!-- Navbar -->
   @include('partials.navbar')
 
   <div class="overlay">

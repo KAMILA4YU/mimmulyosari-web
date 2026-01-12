@@ -35,7 +35,7 @@
     display: inline-block;
   }
 
-  /* Masonry Grid */
+  /* Grid */
   .masonry {
     column-count: 3;
     column-gap: 1.8rem;
@@ -119,7 +119,7 @@
 </head>
 <body>
 
-  {{-- Navbar --}}
+  <!-- Navbar -->
   @include('partials.navbar')
 
   <div class="overlay">
@@ -132,7 +132,7 @@
   <div class="masonry-item">
     <div class="artikel-card">
 
-      {{-- Gambar artikel --}}
+      <!-- Gambar artikel -->
       <img 
         src="{{ $artikel->gambar ? asset('storage/' . $artikel->gambar) : asset('img/default-article.jpg') }}"
         class="artikel-img"
@@ -168,7 +168,7 @@
     </div>
   </div>
 
-  {{-- Footer --}}
+  <!-- Footer -->
   <footer class="bg-dark text-white text-center py-3">
     <small>© {{ date('Y') }} MI Muhammadiyah Mulyosari. All rights reserved.</small>
   </footer>

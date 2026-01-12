@@ -50,17 +50,17 @@
         Manajemen Berita Sekolah
     </h4>
 
-    {{-- Alert sukses --}}
+    <!-- Alert sukses -->
     @if(session('success'))
         <div class="alert alert-success shadow-sm">{{ session('success') }}</div>
     @endif
 
-    {{-- Tombol tambah --}}
+    <!-- Tombol tambah -->
     <button class="btn btn-primary mb-3 shadow-sm" data-bs-toggle="modal" data-bs-target="#tambahBeritaModal">
         <i class="bi bi-plus-circle"></i> Tambah Berita
     </button>
 
-    {{-- Table --}}
+    <!-- Table -->
     <div class="card shadow-sm border-0">
         <div class="card-body">
 
@@ -95,7 +95,7 @@
 
                                 <td>
                                     <div class="d-flex gap-2 flex-wrap">
-                                        {{-- Edit --}}
+                                        <!-- Edit -->
                                         <button 
                                             class="btn btn-warning btn-sm"
                                             data-bs-toggle="modal" 
@@ -103,7 +103,7 @@
                                             <i class="bi bi-pencil-square me-1"></i> Edit
                                         </button>
 
-                                        {{-- Hapus --}}
+                                        <!-- Hapus -->
                                         <form action="{{ route('admin.berita.destroy', $item->id) }}" 
                                             method="POST"
                                             onsubmit="return confirm('Yakin hapus berita ini?')">
@@ -117,7 +117,7 @@
                                 </td>
                             </tr>
 
-                            {{-- Modal Edit --}}
+                            <!-- Modal Edit -->
                             <div class="modal fade" id="editModal{{ $item->id }}" tabindex="-1">
                                 <div class="modal-dialog modal-lg modal-dialog-centered">
                                     <div class="modal-content">
@@ -177,14 +177,14 @@
         </div>
     </div>
 
-    {{-- Pagination --}}
+    <!-- Pagination -->
     <div class="mt-3 d-flex justify-content-center">
         {{ $berita->links('pagination::bootstrap-5') }}
     </div>
 
 </div>
 
-{{-- Modal Tambah --}}
+<!-- Modal Tambah -->
 <div class="modal fade" id="tambahBeritaModal" tabindex="-1">
     <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">

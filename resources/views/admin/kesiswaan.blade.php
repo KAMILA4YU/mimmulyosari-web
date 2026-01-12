@@ -3,14 +3,14 @@
 @section('content')
 <div class="container-fluid mt-4">
 
-    {{-- ========== JUDUL HALAMAN ========== --}}
+    <!-- ========== JUDUL HALAMAN ========== -->
     <div class="d-flex align-items-center justify-content-between mb-4">
         <h4 class="fw-bold text-primary mb-0">
             Manajemen Kesiswaan
         </h4>
     </div>
 
-    {{-- ========== ALERT SUCCESS ========== --}}
+    <!-- ========== ALERT SUCCESS ========== -->
     @if(session('success'))
         <div id="alertSuccess" class="alert alert-success alert-dismissible fade show shadow-sm rounded-3" role="alert">
             <strong><i class="bi bi-check-circle-fill me-1"></i> Berhasil!</strong> {{ session('success') }}
@@ -31,7 +31,7 @@
     $activeTab = session('active_tab') ?: 'ekskul';
 @endphp
 
-    {{-- ==================== TAB NAVIGASI ==================== --}}
+    <!-- ==================== TAB NAVIGASI ==================== -->
     <div class="card shadow-sm border-0 rounded-4">
         <div class="card-body p-0">
 
@@ -57,7 +57,7 @@
             <div class="tab-content p-4">
 
                  
-                {{-- ======================= TAB EKSKUL ====== --}}
+                <!-- ======================= TAB EKSKUL ====== -->
                  
                 <div class="tab-pane fade {{ $activeTab === 'ekskul' ? 'show active' : '' }}" id="ekskul">
                     <div class="d-flex justify-content-between align-items-center mb-3">
@@ -128,7 +128,7 @@
                     </div>
 
                  
-                {{--  TAB ORGANISASI  --}}
+                <!--  TAB ORGANISASI  -->
                 
                 <div class="tab-pane fade {{ $activeTab === 'organisasi' ? 'show active' : '' }}" id="organisasi">
                     
@@ -165,7 +165,7 @@
                 </div>
 
                  
-                {{--  TAB KEAGAMAAN  --}}
+                <!--  TAB KEAGAMAAN  -->
                  
                 
                 <div class="tab-pane fade {{ $activeTab === 'keagamaan' ? 'show active' : '' }}" id="keagamaan">
@@ -202,7 +202,7 @@
                 </div>
 
                  
-                {{--  TAB PRESTASI  --}}
+                <!--  TAB PRESTASI  -->
                  
                 <div class="tab-pane fade {{ $activeTab === 'prestasi' ? 'show active' : '' }}" id="prestasi">
 
@@ -246,7 +246,7 @@
                 </div>
 
                  
-                {{--  TAB PEMBINAAN  --}}
+                <!--  TAB PEMBINAAN  -->
                  
                 <div class="tab-pane fade {{ $activeTab === 'pembinaan' ? 'show active' : '' }}" id="pembinaan">
 
@@ -283,7 +283,7 @@
                 </div>
 
                  
-                {{--  TAB PENGATURAN  --}}
+                <!--  TAB PENGATURAN  -->
                  
                 <div class="tab-pane fade {{ $activeTab === 'pengaturan' ? 'show active' : '' }}" id="pengaturan">
 

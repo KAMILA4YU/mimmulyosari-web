@@ -73,7 +73,7 @@
             }
         }
 
-        /* tombol logout outline */
+        /* tombol logout */
         .logout-btn {
             border: 1px solid #dc3545;
             color: #dc3545 !important;
@@ -94,12 +94,10 @@
             color: white !important;
         }
 
-        /* saat sidebar collapsed → span hilang otomatis */
         #sidebar.collapsed .logout-btn span {
             display: none;
         }
 
-        /* saat collapsed, rapikan padding biar ikon tetap center */
         #sidebar.collapsed .logout-btn {
             padding-left: 14px;
             text-align: center;
@@ -110,7 +108,6 @@
 </head>
 <body>
 
-<!-- Overlay mobile -->
 <div id="overlay"></div>
 
 <!-- Navbar -->
@@ -128,7 +125,7 @@
 
 <div class="d-flex">
 
-    {{-- SIDEBAR --}}
+    <!-- SIDEBAR -->
     <aside id="sidebar" class="sidebar hidden border-end p-3">
         <h5 class="fw-bold mb-4">Dashboard</h5>
 
@@ -188,7 +185,7 @@
         </ul>
     </aside>
 
-    {{-- MAIN CONTENT --}}
+    <!-- MAIN CONTENT -->
     <main id="main-content" class="flex-grow-1 p-4">
         @yield('content')
     </main>

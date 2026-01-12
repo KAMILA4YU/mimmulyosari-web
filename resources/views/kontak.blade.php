@@ -15,7 +15,6 @@
 
   @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <style>
@@ -27,7 +26,7 @@
   .overlay {
     background-color: rgba(255, 255, 255, 0.95);
     min-height: 100vh;
-    padding: 120px 20px 40px; /* lebih kecil & responsive */
+    padding: 120px 20px 40px;
   }
 
   @media (min-width: 768px) {
@@ -108,7 +107,7 @@
 </head>
 <body>
 
-  {{-- Navbar --}}
+  <!-- Navbar -->
   @include('partials.navbar')
 
   <div class="overlay">
@@ -183,7 +182,7 @@
     </div>
   </div>
 
-  {{-- Footer --}}
+  <!-- Footer -->
   <footer class="bg-dark text-white text-center py-3">
     <small>© {{ date('Y') }} MI Muhammadiyah Mulyosari. All rights reserved.</small>
   </footer>

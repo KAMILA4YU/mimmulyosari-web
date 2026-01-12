@@ -8,7 +8,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-  {{-- Navbar --}}
+  <!-- Navbar -->
   @include('partials.navbar')
 
   <div class="overlay bg-light py-5">
@@ -18,7 +18,7 @@
         Silakan isi formulir berikut dengan data yang benar dan lengkap.
       </p>
 
-      {{-- Error validation --}}
+      <!-- Error validation -->
       @if ($errors->any())
         <div class="alert alert-danger">
           <ul class="mb-0">
@@ -29,7 +29,7 @@
         </div>
       @endif
 
-      {{-- Formulir --}}
+      <!-- Formulir -->
       <form action="{{ route('ppdb.store') }}" method="POST" class="card shadow-sm p-4 border-0 rounded-4">
         @csrf
 
@@ -64,7 +64,7 @@
     </div>
   </div>
 
-  {{-- Footer --}}
+  <!-- Footer -->
   <footer class="bg-dark text-white text-center py-3 mt-5">
     <small>© {{ date('Y') }} MI Muhammadiyah Mulyosari. All rights reserved.</small>
   </footer>

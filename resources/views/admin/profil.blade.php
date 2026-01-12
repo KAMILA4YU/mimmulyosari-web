@@ -8,7 +8,7 @@
 
     <h4 class="fw-bold mb-4 text-primary">Profil Admin</h4>
 
-    {{-- ALERT SUCCESS --}}
+    <!-- ALERT SUCCESS -->
     @if(session('success'))
         <div class="alert alert-success">{{ session('success') }}</div>
     @endif
@@ -25,11 +25,11 @@
 
     <div class="row gy-4">
 
-        {{-- KARTU PROFIL --}}
+        <!-- KARTU PROFIL -->
         <div class="col-lg-4">
             <div class="card shadow-sm border-0 p-4 text-center h-100">
 
-                {{-- Foto --}}
+                <!-- Foto -->
                 <div class="d-flex justify-content-center mb-3">
                     <div class="position-relative d-inline-block">
 
@@ -81,7 +81,7 @@
             </div>
         </div>
 
-        {{-- FORM EDIT --}}
+        <!-- FORM EDIT -->
         <div class="col-lg-8">
             <div class="card shadow-sm border-0 h-100">
                 <div class="card-body p-4">
@@ -98,21 +98,21 @@
                             accept="image/*"
                             onchange="previewAdminImage(this)">
 
-                        {{-- Nama --}}
+                        <!-- Nama -->
                         <div class="mb-3">
                             <label class="form-label fw-semibold">Nama</label>
                             <input type="text" name="name" class="form-control"
                                    value="{{ old('name', $admin->name) }}" required>
                         </div>
 
-                        {{-- Email --}}
+                        <!-- Email -->
                         <div class="mb-3">
                             <label class="form-label fw-semibold">Email</label>
                             <input type="email" name="email" class="form-control"
                                    value="{{ old('email', $admin->email) }}" required>
                         </div>
 
-                        {{-- Password Baru --}}
+                        <!-- Password Baru -->
                         <div class="mb-3">
                             <label class="form-label fw-semibold">Password Baru</label>
                             <div class="input-group">
@@ -127,7 +127,7 @@
                             </div>
                         </div>
 
-                        {{-- Konfirmasi Password --}}
+                        <!-- Konfirmasi Password -->
                         <div class="mb-3">
                             <label class="form-label fw-semibold">Konfirmasi Password</label>
                             <div class="input-group">
@@ -142,14 +142,14 @@
                             </div>
                         </div>
 
-                        {{-- Foto --}}
+                        <!-- Foto -->
                         <!-- <div class="mb-3">
                             <label class="form-label fw-semibold">Foto Profil</label>
                             <input type="file" name="foto" class="form-control">
                             <small class="text-muted">Biarkan kosong jika tidak ingin mengganti foto.</small>
                         </div> -->
 
-                        {{-- Tombol --}}
+                        <!-- Tombol -->
                         <button class="btn btn-primary px-4" type="submit">
                             Simpan Perubahan
                         </button>

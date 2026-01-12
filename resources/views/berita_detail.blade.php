@@ -25,7 +25,6 @@
             padding: 130px 20px 70px;
         }
 
-        /* CONTAINER MAX WIDTH SUPAYA RAPI BANGET DI DESKTOP */
         .news-wrapper {
             max-width: 900px;
             margin: auto;
@@ -124,31 +123,31 @@
     <div class="overlay">
         <div class="container news-wrapper">
 
-            {{-- Tombol kembali --}}
+            <!-- Tombol kembali -->
             <div class="mb-4">
                 <a href="{{ route('berita') }}" class="btn btn-outline-primary rounded-pill px-4 py-2">
                     <i class="bi bi-arrow-left"></i> Kembali ke Berita
                 </a>
             </div>
 
-            {{-- CARD BERITA --}}
+            <!-- CARD BERITA -->
             <div class="news-card">
 
-                {{-- Judul --}}
+                <!-- Judul -->
                 <h1 class="judul-berita mb-3">{{ $item->judul }}</h1>
 
-                {{-- Info --}}
+                <!-- Info -->
                 <div class="sub-info mb-4">
                     <i class="bi bi-calendar-event"></i>
                     {{ \Carbon\Carbon::parse($item->created_at)->translatedFormat('d F Y') }}
                 </div>
 
-                {{-- Gambar --}}
+                <!-- Gambar -->
                 @if($item->gambar)
                     <img src="{{ asset('storage/' . $item->gambar) }}" class="news-img mb-4">
                 @endif
 
-                {{-- Isi --}}
+                <!-- Isi -->
                 <div class="content">
                     {!! nl2br($item->isi) !!}
                 </div>
@@ -158,7 +157,7 @@
         </div>
     </div>
 
-    {{-- FOOTER --}}
+    <!-- FOOTER -->
     <footer class="bg-dark text-white text-center py-3">
         <small>© {{ date('Y') }} MI Muhammadiyah Mulyosari. All rights reserved.</small>
     </footer>

@@ -3,14 +3,14 @@
 @section('content')
 <div class="container-fluid px-4">
 
-    {{--   JUDUL HALAMAN   --}}
+    <!--   JUDUL HALAMAN   -->
     <div class="d-flex align-items-center justify-content-between mb-4">
         <h4 class="fw-bold text-primary mb-0">
             Detail Pendaftar PPDB
         </h4>
     </div>
 
-    {{-- ALERT SUCCESS --}}
+    <!-- ALERT SUCCESS -->
     @if(session('success'))
         <div class="alert alert-success alert-dismissible fade show rounded-3 mb-4" role="alert">
             <i class="bi bi-check-circle-fill me-1"></i>
@@ -19,7 +19,7 @@
         </div>
     @endif
 
-    {{--   CARD: DATA DIRI SISWA   --}}
+    <!--   CARD: DATA DIRI SISWA   -->
     <div class="card border-0 shadow-sm rounded-4 mb-4">
         <div class="card-body">
             <h5 class="fw-semibold mb-3 pb-2 border-bottom">Data Diri Siswa</h5>
@@ -62,7 +62,7 @@
         </div>
     </div>
 
-    {{--   CARD: DATA ORANG TUA   --}}
+    <!--   CARD: DATA ORANG TUA   -->
     <div class="card border-0 shadow-sm rounded-4 mb-4">
         <div class="card-body">
             <h5 class="fw-semibold mb-3 pb-2 border-bottom">Data Orang Tua</h5>
@@ -89,7 +89,7 @@
         </div>
     </div>
 
-    {{--   CARD: DOKUMEN WAJIB   --}}
+    <!--   CARD: DOKUMEN WAJIB   -->
     <div class="card border-0 shadow-sm rounded-4 mb-4">
         <div class="card-body">
             <h5 class="fw-semibold mb-3 pb-2 border-bottom">Dokumen Wajib</h5>
@@ -207,7 +207,7 @@
         </div>
     </div>
 
-    {{--   CARD: DOKUMEN PENDUKUNG   --}}
+    <!--   CARD: DOKUMEN PENDUKUNG   -->
     <div class="card border-0 shadow-sm rounded-4 mb-4">
         <div class="card-body">
             <h5 class="fw-semibold mb-3 pb-2 border-bottom">Dokumen Pendukung</h5>
@@ -258,7 +258,7 @@
         </div>
     </div>
 
-    {{--   CARD: STATUS BERKAS   --}}
+    <!--   CARD: STATUS BERKAS   -->
     <div class="card border-0 shadow-sm rounded-4 mb-5">
         <div class="card-body">
             <h5 class="fw-semibold mb-3 pb-2 border-bottom">Status Kelengkapan Berkas</h5>

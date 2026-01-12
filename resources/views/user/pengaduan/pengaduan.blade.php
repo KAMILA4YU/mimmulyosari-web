@@ -3,7 +3,7 @@
 @section('content')
 <div class="container py-4">
 
-    {{-- HEADER --}}
+    <!-- HEADER -->
     <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-4 gap-2">
         <h2 class="fw-bold m-0">
             <i class="bi bi-chat-dots me-2"></i> Pengaduan Saya
@@ -23,15 +23,15 @@
                     <div class="card pengaduan-card h-100 shadow-sm border-0">
                         <div class="card-body">
 
-                            {{-- Judul --}}
+                            <!-- Judul -->
                             <h5 class="fw-semibold text-dark mb-2">{{ $aduan->subjek }}</h5>
 
-                            {{-- Preview Pesan --}}
+                            <!-- Preview Pesan -->
                             <p class="text-muted small mb-3" style="min-height: 50px;">
                                 {{ Str::limit($aduan->pesan, 85) }}
                             </p>
 
-                            {{-- Status --}}
+                            <!-- Status -->
                             @if($aduan->status == 'Menunggu')
                                 <span class="status-badge waiting">
                                     <i class="bi bi-hourglass-split me-1"></i> Menunggu
@@ -46,7 +46,7 @@
                                 </span>
                             @endif
 
-                            {{-- Tanggal --}}
+                            <!-- Tanggal -->
                             <div class="text-end small text-muted mt-3">
                                 {{ $aduan->created_at->format('d M Y') }}
                             </div>
@@ -67,7 +67,6 @@
 
 </div>
 
-{{-- STYLE IMPROVEMENT --}}
 <style>
     /* Card */
     .pengaduan-card {
@@ -106,7 +105,7 @@
         border: 1px solid #a3cfbb;
     }
 
-    /* Responsive tweaks */
+    /* Responsive */
     @media (max-width: 576px) {
         h2 {
             font-size: 1.4rem;

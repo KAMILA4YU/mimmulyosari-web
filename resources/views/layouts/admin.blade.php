@@ -137,7 +137,7 @@
 </head>
 <body>
 
-    {{-- Navbar atas --}}
+    <!-- Navbar atas -->
     <nav class="navbar navbar-dark navbar-custom px-3 shadow-sm fixed-top">
         <div class="d-flex align-items-center">
             <button class="btn btn-outline-light me-3 d-lg-none" id="toggleSidebarBtn">☰</button>
@@ -150,7 +150,7 @@
     </nav>
 
     <div class="admin-wrapper">
-        {{-- Sidebar --}}
+        <!-- Sidebar -->
         <aside id="sidebar" class="sidebar">
             <h5 class="fw-bold mb-4">MI Muhammadiyah<br>Mulyosari</h5>
             <ul class="nav flex-column">
@@ -213,7 +213,7 @@
             </ul>
         </aside>
 
-        {{-- Konten utama --}}
+        <!-- Konten utama -->
         <main class="main-content">
             @yield('content')
         </main>

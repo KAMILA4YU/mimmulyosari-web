@@ -100,7 +100,7 @@
                                 <span class="d-block"><strong>Ibu:</strong> {{ $p->no_hp_ibu }}</span>
                             </td>
 
-                            {{-- STATUS BADGE --}}
+                            <!-- STATUS BADGE -->
                             <td>
                                 @php
                                     $status = $p->status;

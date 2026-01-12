@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
 
-    {{--   JUDUL HALAMAN   --}}
+    <!--   JUDUL HALAMAN   -->
     <div class="d-flex align-items-center justify-content-between mb-4">
         <h4 class="fw-bold text-primary mb-0">
             Cetak Berkas Pendaftar

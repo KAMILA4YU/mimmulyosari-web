@@ -15,7 +15,7 @@
 
     <h4 class="mb-4 fw-bold text-primary">Kelola Profil Sekolah</h4>
 
-    {{-- ========== ALERT SUCCESS ========== --}}
+    <!-- ========== ALERT SUCCESS ========== -->
     @if(session('success'))
         <div id="alertSuccess"
             class="alert alert-success alert-dismissible fade show"
@@ -37,7 +37,7 @@
         </script>
     @endif
 
-    {{-- ======= NOTIF GURU ======= --}}
+    <!-- ======= NOTIF GURU ======= -->
     <div id="notifGuru" style="display:none;">
         <div class="alert alert-success alert-dismissible fade show mt-3">
             <span id="notifGuruText"></span>
@@ -45,7 +45,7 @@
         </div>
     </div>
 
-    {{-- TAB NAVIGASI --}}
+    <!-- TAB NAVIGASI -->
     <ul class="nav nav-tabs">
     <li class="nav-item">
         <a href="{{ route('admin.profil-sekolah', ['tab' => 'identitas']) }}"
@@ -70,10 +70,10 @@
 </ul>
 
 
-    {{-- ISI TAB --}}
+    <!-- ISI TAB -->
     <div class="tab-content p-4 bg-white border border-top-0 rounded-bottom shadow-sm">
 
-        {{--  == TAB IDENTITAS  == --}}
+        <!--  == TAB IDENTITAS  == -->
         <div class="tab-pane fade {{ $activeTab == 'identitas' ? 'show active' : '' }}">
             <form action="{{ route('admin.profil-sekolah.update') }}" method="POST" enctype="multipart/form-data">
                 @csrf
@@ -122,7 +122,7 @@
                                value="{{ $profil->akreditasi ?? '' }}">
                     </div>
 
-                    {{-- FOTO SEKOLAH DI TAB IDENTITAS --}}
+                    <!-- FOTO SEKOLAH DI TAB IDENTITAS -->
                     <div class="col-md-12 mb-3">
                         <label class="form-label fw-semibold">Foto Sekolah</label><br>
 
@@ -139,7 +139,7 @@
             </form>
         </div>
 
-        {{--  == TAB VISI & MISI  == --}}
+        <!--  == TAB VISI & MISI  == -->
             <div class="tab-pane fade {{ $activeTab == 'visi' ? 'show active' : '' }}">
                 <form action="{{ route('admin.profil-sekolah.update') }}" method="POST">
                     @csrf
@@ -161,7 +161,7 @@
             </div>
 
 
-        {{--  == TAB STRUKTUR  == --}}
+        <!--  == TAB STRUKTUR  == -->
             <div class="tab-pane fade {{ $activeTab == 'struktur' ? 'show active' : '' }}">
                 <p class="text-muted">Silakan upload atau edit data guru</p>
 
@@ -259,7 +259,7 @@
 
                 <hr>
 
-                {{--   LIST DATA GURU   --}}
+                <!--   LIST DATA GURU   -->
                 <div class="row" id="listGuru">
                     @forelse ($gurus as $guru)
                         <div class="col-6 col-md-3 col-xl-2 mb-3 guru-col">

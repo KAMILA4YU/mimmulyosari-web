@@ -7,7 +7,6 @@
 
   @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
@@ -29,21 +28,21 @@
 </head>
 <body>
 
-  {{-- Navbar --}}
+  <!-- Navbar -->
   @include('partials.navbar')
 
   <div class="overlay">
     <div class="container">
       <h1 class="text-center fw-bold mb-5">Hasil Pendaftaran PPDB</h1>
 
-      {{-- Pesan sukses --}}
+      <!-- Pesan sukses -->
       @if(session('success'))
         <div class="alert alert-success text-center">
           {{ session('success') }}
         </div>
       @endif
 
-      {{-- Data Pendaftar --}}
+      <!-- Data Pendaftar -->
       <div class="card shadow p-4">
         <h3 class="mb-3">Data Calon Peserta Didik</h3>
         <table class="table table-bordered">
@@ -72,12 +71,11 @@
     </div>
   </div>
 
-  {{-- Footer --}}
+  <!-- Footer -->
   <footer class="bg-dark text-white text-center py-3">
     <small>© {{ date('Y') }} MI Muhammadiyah Mulyosari. All rights reserved.</small>
   </footer>
 
-  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script>
   document.addEventListener("DOMContentLoaded", function () {

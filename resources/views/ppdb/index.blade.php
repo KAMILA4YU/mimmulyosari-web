@@ -24,7 +24,7 @@
   .overlay {
     background-color: rgba(255, 255, 255, 0.93);
     min-height: 100vh;
-    padding: 120px 20px 40px; /* mobile friendly */
+    padding: 120px 20px 40px;
   }
 
   .overlay .container {
@@ -52,7 +52,7 @@
     color: #1f3a4c;
   }
 
-  /* Card styling */
+  /* Card */
   .ppdb-card {
   border-radius: 18px;
   padding: 28px;
@@ -76,7 +76,7 @@
 }
 
 
-  /* Text paragraph */
+  /* Text */
   .intro-text {
     max-width: 720px;
   margin: 0 auto 2.5rem;
@@ -141,7 +141,7 @@
 </head>
 <body>
 
-  {{-- Navbar --}}
+  <!-- Navbar -->
   @include('partials.navbar')
 
   <div class="overlay">
@@ -181,12 +181,11 @@
     </div>
   </div>
 
-  {{-- Footer --}}
+  <!-- Footer -->
   <footer class="bg-dark text-white text-center py-3">
     <small>© {{ date('Y') }} MI Muhammadiyah Mulyosari. All rights reserved.</small>
   </footer>
 
-  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
   <script>

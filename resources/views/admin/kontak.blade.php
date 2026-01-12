@@ -177,7 +177,7 @@
                                 <td class="text-center">
                                     <div class="d-flex flex-column gap-2">
 
-                                        {{-- BALAS --}}
+                                        <!-- BALAS -->
                                         <a href="{{ route('admin.kontak.reply', [
                                                 'id' => $kontak->id,
                                                 'tab' => 'pesan'
@@ -188,7 +188,7 @@
                                             <span class="d-none d-md-inline">Balas</span>
                                         </a>
 
-                                        {{-- HAPUS --}}
+                                        <!-- HAPUS -->
                                         <form action="{{ route('admin.kontak.destroy', $kontak->id) }}"
                                             method="POST"
                                             onsubmit="return confirm('Yakin mau dihapus?')">

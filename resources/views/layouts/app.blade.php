@@ -20,7 +20,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="font-sans antialiased bg-light">
-    {{-- Navbar --}}
+    <!-- Navbar -->
     @include('partials.navbar')
 
     <!-- Page Heading -->
@@ -35,7 +35,6 @@
     <!-- Page Content -->
     <main class="py-4">
         <div class="container">
-            {{-- Support both component ($slot) and traditional layouts (@section('content')) --}}
             @if(isset($slot))
                 {{ $slot }}
             @else
@@ -44,7 +43,6 @@
         </div>
     </main>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

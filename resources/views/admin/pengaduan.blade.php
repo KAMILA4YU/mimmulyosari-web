@@ -83,7 +83,7 @@
                             <td class="text-center">
                                 <div class="d-flex flex-wrap justify-content-center gap-2">
 
-                                    {{-- LIHAT --}}
+                                    <!-- LIHAT -->
                                     <a href="{{ route('admin.pengaduan.show', $p->id) }}"
                                     class="btn btn-outline-primary btn-sm d-flex align-items-center gap-1"
                                     title="Lihat Detail">
@@ -91,7 +91,7 @@
                                         <span class="d-none d-md-inline">Lihat</span>
                                     </a>
 
-                                    {{-- HAPUS --}}
+                                    <!-- HAPUS -->
                                     <form action="{{ route('admin.pengaduan.destroy', $p->id) }}"
                                         method="POST"
                                         class="mb-0"

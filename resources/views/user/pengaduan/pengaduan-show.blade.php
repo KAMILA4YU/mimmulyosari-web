@@ -3,7 +3,7 @@
 @section('content')
 <div class="container py-4">
 
-    {{-- Header --}}
+    <!-- Header -->
     <div class="mb-4">
         <h4 class="fw-bold d-flex align-items-center gap-2">
             <i class="bi bi-chat-left-text text-primary"></i>
@@ -12,15 +12,15 @@
         <p class="text-muted mb-0">Lihat pesan dan balasan dari admin.</p>
     </div>
 
-    {{-- Card Utama --}}
+    <!-- Card Utama -->
     <div class="card shadow-sm border-0 rounded-4">
         <div class="card-body p-4">
 
-            {{-- Judul & Isi Pengaduan --}}
+            <!-- Judul & Isi Pengaduan -->
             <h5 class="fw-bold mb-2">{{ $pengaduan->subjek }}</h5>
             <p class="text-secondary">{{ $pengaduan->pesan }}</p>
 
-            {{-- Status Pengaduan --}}
+            <!-- Status Pengaduan -->
             <div class="mt-3">
                 <small class="fw-semibold">Status:</small>
                 @if($pengaduan->status == 'Menunggu')
@@ -40,7 +40,7 @@
 
             <hr class="my-4">
 
-            {{-- Balasan Admin --}}
+            <!-- Balasan Admin -->
             <h6 class="fw-semibold mb-3 d-flex align-items-center gap-2">
                 <i class="bi bi-reply-fill text-success"></i>
                 Balasan Admin
@@ -59,7 +59,7 @@
                 <p class="text-muted fst-italic">Belum ada balasan dari admin.</p>
             @endforelse
 
-            {{-- Tombol Kembali --}}
+            <!-- Tombol Kembali -->
             <a href="{{ route('user.pengaduan.index') }}"
                class="btn btn-outline-secondary rounded-pill mt-3">
                 <i class="bi bi-arrow-left me-1"></i> Kembali

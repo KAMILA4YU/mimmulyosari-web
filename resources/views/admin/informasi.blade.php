@@ -11,14 +11,14 @@
 
 <div class="container-fluid">
 
-    {{-- ========================= TITLE ========================== --}}
+    <!-- ========================= TITLE ========================== -->
     <div class="d-flex align-items-center justify-content-between mb-4">
         <h4 class="fw-bold text-primary mb-0">
             Manajemen Informasi Sekolah
         </h4>
     </div>
 
-    {{-- ========================= ALERT ========================== --}}
+    <!-- ========================= ALERT ========================== -->
     @if(session('success'))
         <div id="alertSuccess"
             class="alert alert-success alert-dismissible fade show"
@@ -39,7 +39,7 @@
         </script>
     @endif
 
-    {{-- ========================= TAB MENU ========================== --}}
+    <!-- ========================= TAB MENU ========================== -->
     <ul class="nav nav-tabs shadow-sm">
     <li class="nav-item">
         <a href="{{ route('admin.informasi', ['tab' => 'pengumuman']) }}"
@@ -57,10 +57,10 @@
 </ul>
 
 
-    {{-- ========================= TAB CONTENT ========================== --}}
+    <!-- ========================= TAB CONTENT ========================== -->
     <div class="tab-content mt-4">
 
-        {{-- ===================== TAB PENGUMUMAN ===================== --}}
+        <!-- ===================== TAB PENGUMUMAN ===================== -->
         <div class="tab-pane fade {{ $activeTab == 'pengumuman' ? 'show active' : '' }}"
              id="pengumuman">
             @include('admin.partials.informasi-tab', [
@@ -70,7 +70,7 @@
             ])
         </div>
 
-        {{-- ===================== TAB AGENDA ===================== --}}
+        <!-- ===================== TAB AGENDA ===================== -->
         <div class="tab-pane fade {{ $activeTab == 'agenda' ? 'show active' : '' }}"
              id="agenda">
             @include('admin.partials.informasi-tab', [

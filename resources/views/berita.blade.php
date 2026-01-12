@@ -156,10 +156,10 @@
         <div class="col-md-6 col-lg-4">
           <div class="card-berita">
 
-            {{-- Gambar --}}
+            <!-- Gambar -->
             <img src="{{ asset('storage/' . $item->gambar) }}" alt="{{ $item->judul }}">
 
-            {{-- Body --}}
+            <!-- Body -->
             <div class="card-body d-flex flex-column">
               <h5 class="card-title">{{ $item->judul }}</h5>
 
@@ -180,7 +180,7 @@
 
       </div>
 
-      {{-- Pagination --}}
+      <!-- Pagination -->
       <div class="d-flex justify-content-center">
         {{ $berita->links() }}
       </div>
@@ -188,7 +188,7 @@
     </div>
   </div>
 
-   {{-- FOOTER --}}
+   <!-- FOOTER -->
   <footer class="bg-dark text-white text-center py-3">
     <small>© {{ date('Y') }} MI Muhammadiyah Mulyosari. All rights reserved.</small>
   </footer>

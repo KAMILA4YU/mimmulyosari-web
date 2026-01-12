@@ -152,7 +152,7 @@
     overflow: hidden;
   }
 
-    /* ===== STRUKTUR ORGANISASI ===== */
+    /* STRUKTUR ORGANISASI */
   .organisasi-wrapper {
     margin-top: 10px;
   }
@@ -259,7 +259,7 @@
 
   <div class="overlay">
     
-  {{-- FOTO SEKOLAH --}}
+  <!-- FOTO SEKOLAH -->
   <div class="hero-photo">
     <img src="{{ asset('storage/' . $profil->foto_sekolah) }}" alt="Gedung Sekolah">
     <div class="hero-overlay"></div>  
@@ -271,7 +271,7 @@
       
   <div class="container">
       <div class="row g-4 mb-5 align-items-stretch">
-      {{-- KIRI : IDENTITAS --}}
+      <!-- KIRI : IDENTITAS -->
       <div class="col-lg-6 d-flex">
       <div class="bg-white shadow-sm rounded-4 p-4 w-100 h-100">
 
@@ -316,7 +316,7 @@
     </div>
 
 
-      {{-- KANAN : VISI & MISI --}}
+      <!-- KANAN : VISI & MISI -->
       <div class="col-lg-6 d-flex">
         <div class="bg-white shadow-sm rounded p-4 w-100 h-100 d-flex flex-column">
 
@@ -342,7 +342,7 @@
     </div>
 
 
-      {{-- GURU --}}
+      <!-- GURU -->
 <h3 class="section-title text-center mb-4">
   Struktur Organisasi Guru
 </h3>
@@ -378,12 +378,12 @@
     </div>
   </div>
 
-  {{-- Footer --}}
+  <!-- Footer -->
   <footer class="bg-dark text-white text-center py-3">
     <small>© {{ date('Y') }} MI Muhammadiyah Mulyosari. All rights reserved.</small>
   </footer>
 
-  <!-- NAVBAR LOGIC -->
+  <!-- script js navbar -->
   <script>
   document.addEventListener("DOMContentLoaded", function () {
       const navbar = document.querySelector(".custom-navbar");

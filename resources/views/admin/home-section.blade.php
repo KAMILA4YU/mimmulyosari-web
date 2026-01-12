@@ -62,7 +62,7 @@
 
         <div class="tab-content p-4 bg-white border border-top-0 rounded-bottom shadow-sm">
 
-            {{-- HERO SECTION --}}
+            <!-- HERO SECTION -->
             <div class="tab-pane fade {{ $tab == 'hero' ? 'show active' : '' }}" id="hero">
                 <div class="row g-3">
                     <div class="col-md-6">
@@ -87,7 +87,7 @@
                 </div>
             </div>
 
-            {{-- SAMBUTAN --}}
+            <!-- SAMBUTAN -->
             <div class="tab-pane fade {{ $tab == 'sambutan' ? 'show active' : '' }}" id="sambutan">
                 <label class="form-label fw-semibold">Judul</label>
                 <input type="text" name="judul_sambutan" class="form-control mb-3" value="{{ $home->judul_sambutan }}">
@@ -102,7 +102,7 @@
                 @endif
             </div>
 
-            {{-- TENTANG KAMI --}}
+            <!-- TENTANG KAMI -->
             <div class="tab-pane fade {{ $tab == 'tentang' ? 'show active' : '' }}" id="tentang">
                 <label class="form-label fw-semibold">Judul</label>
                 <input type="text" name="judul_tentang" class="form-control mb-3" value="{{ $home->judul_tentang }}">
@@ -117,7 +117,7 @@
                 @endif -->
             </div>
 
-            {{-- MEDIA SOSIAL --}}
+            <!-- MEDIA SOSIAL -->
             <div class="tab-pane fade {{ $tab == 'sosial' ? 'show active' : '' }}" id="sosial">
                 <div class="row g-3">
                     <div class="col-md-6">
@@ -143,7 +143,7 @@
                 </div>
             </div>
 
-            {{-- INFO PPDB --}}
+            <!-- INFO PPDB -->
             <div class="tab-pane fade {{ $tab == 'ppdb-info' ? 'show active' : '' }}" id="ppdb-info">
                 <div class="mb-3">
                     <label class="form-label fw-semibold">Status PPDB</label>

@@ -3,7 +3,7 @@
 @section('content')
 <div class="container mt-4">
 
-    {{-- Header --}}
+    <!-- Header -->
     <div class="d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between mb-4">
         <h4 class="fw-bold text-primary mb-3 mb-md-0">
             Manajemen Artikel Sekolah
@@ -11,7 +11,7 @@
         <!-- <a href="#tambahArtikel" class="btn btn-success shadow-sm">Tambah Artikel Baru</a> -->
     </div>
 
-    {{-- Pesan sukses --}}
+    <!-- Pesan sukses -->
     @if(session('success'))
         <div class="alert alert-success alert-dismissible fade show" role="alert">
             {{ session('success') }}
@@ -19,7 +19,7 @@
         </div>
     @endif
 
-    {{-- Form Tambah Artikel --}}
+    <!-- Form Tambah Artikel -->
     <div class="card mb-4 shadow-sm" id="tambahArtikel">
         <div class="card-header bg-primary text-white fw-semibold">Tambah Artikel Baru</div>
         <div class="card-body">
@@ -54,7 +54,7 @@
         </div>
     </div>
 
-    {{-- Daftar Artikel --}}
+    <!-- Daftar Artikel -->
     <div class="card shadow-sm">
         <div class="card-header bg-secondary text-white fw-semibold">Daftar Artikel</div>
         <div class="card-body p-0">
@@ -85,7 +85,7 @@
                                 </td>
                                 <td class="d-flex flex-column gap-2">
 
-                                    {{-- TOGGLE UPDATE --}}
+                                    <!-- TOGGLE UPDATE -->
                                     <button class="btn btn-outline-warning btn-sm w-100 d-flex align-items-center justify-content-center gap-1 toggle-update-btn"
                                             type="button"
                                             data-target="#editArtikel{{ $artikel->id }}">
@@ -93,7 +93,7 @@
                                         <span class="btn-text">Update</span>
                                     </button>
 
-                                    {{-- FORM UPDATE --}}
+                                    <!-- FORM UPDATE -->
                                     <div class="collapse" id="editArtikel{{ $artikel->id }}">
                                         <form action="{{ route('admin.artikel.update', $artikel->id) }}"
                                             method="POST"
@@ -117,7 +117,7 @@
                                         </form>
                                     </div>
 
-                                    {{-- HAPUS --}}
+                                    <!-- HAPUS -->
                                     <form action="{{ route('admin.artikel.destroy', $artikel->id) }}"
                                         method="POST"
                                         onsubmit="return confirm('Yakin hapus artikel ini?')">

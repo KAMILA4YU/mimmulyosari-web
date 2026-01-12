@@ -34,7 +34,7 @@
                 <i class="bi bi-plus-circle"></i> Tambah Foto
             </button>
 
-            {{-- Grid Galeri --}}
+            <!-- Grid Galeri -->
             <div class="row g-4">
                 @forelse ($galeris as $item)
                 <div class="col-6 col-md-4 col-lg-2">
@@ -69,7 +69,7 @@
                     </div>
                 </div>
 
-                {{-- Modal Edit --}}
+                <!-- Modal Edit -->
                 <div class="modal fade" id="modalEdit{{ $item->id }}">
                   <div class="modal-dialog">
                     <form action="{{ route('admin.galeri.update', $item->id) }}" method="POST" enctype="multipart/form-data" class="modal-content">
@@ -111,7 +111,7 @@
 </div>
 
 
-{{-- Modal Tambah --}}
+<!-- Modal Tambah -->
 <div class="modal fade" id="modalTambah">
   <div class="modal-dialog">
     <form action="{{ route('admin.galeri.store') }}" method="POST" enctype="multipart/form-data" class="modal-content">

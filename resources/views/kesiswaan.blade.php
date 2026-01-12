@@ -129,7 +129,7 @@
   }
 
     .kesiswaan-card {
-  align-items: center;      /* TENGAH VERTIKAL */
+  align-items: center;
 }
 
 .kesiswaan-content {
@@ -226,7 +226,7 @@
 
     .prestasi-img-wrapper {
   width: 100%;
-  height: 200px;            /* tinggi seragam */
+  height: 200px;
   overflow: hidden;
   border-radius: 12px;
 }
@@ -234,7 +234,7 @@
 .prestasi-img-wrapper img {
   width: 100%;
   height: 100%;
-  object-fit: cover;        /* auto crop */
+  object-fit: cover;
   object-position: center;
 }
 
@@ -265,7 +265,7 @@
   }
 @endphp
 
-  {{-- FOTO HEADER --}}
+  <!-- FOTO HEADER -->
   <div class="hero-photo">
     <img src="{{ asset('storage/' . $pengaturan->foto_header) }}">
     <div class="hero-overlay"></div>  

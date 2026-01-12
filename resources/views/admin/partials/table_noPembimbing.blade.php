@@ -18,7 +18,7 @@
             <td class="text-center">
                 <x-action-buttons>
 
-                    {{-- EDIT --}}
+                    <!-- EDIT -->
                     <button class="btn btn-outline-warning btn-sm btn-action"
                             data-bs-toggle="modal"
                             data-bs-target="#edit{{ $item->id }}"
@@ -26,7 +26,7 @@
                         <i class="bi bi-pencil-square"></i>
                     </button>
 
-                    {{-- HAPUS --}}
+                    <!-- HAPUS -->
                     <form action="{{ route('admin.kesiswaan.destroy', $item->id) }}"
                         method="POST"
                         onsubmit="return confirm('Yakin hapus data ini?')">
@@ -47,7 +47,7 @@
 
         </tr>
 
-        {{-- MODAL EDIT --}}
+        <!-- MODAL EDIT -->
         <div class="modal fade" id="edit{{ $item->id }}" tabindex="-1">
             <div class="modal-dialog">
                 <form action="{{ route('admin.kesiswaan.update', $item->id) }}" method="POST">

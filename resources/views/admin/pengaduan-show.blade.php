@@ -11,7 +11,7 @@
         <div class="alert alert-success">{{ session('success') }}</div>
     @endif
 
-    {{-- Detail Pengaduan --}}
+    <!-- Detail Pengaduan -->
     <div class="card shadow-sm mb-4">
         <div class="card-body">
             <h5 class="fw-bold mb-3">{{ $pengaduan->subjek }}</h5>
@@ -29,7 +29,7 @@
                 @endif
             </p>
 
-            {{-- Form update status --}}
+            <!-- Form update status -->
             <form action="{{ route('admin.pengaduan.update', $pengaduan->id) }}" method="POST" class="d-flex align-items-center gap-2 mt-3 flex-wrap">
                 @csrf @method('PUT')
                 <select name="status" class="form-select w-auto">
@@ -42,7 +42,7 @@
         </div>
     </div>
 
-    {{-- Balasan --}}
+    <!-- Balasan -->
     <div class="card shadow-sm mb-4">
         <div class="card-body">
             <h5 class="fw-bold mb-3">Balasan</h5>
@@ -61,7 +61,7 @@
                 </ul>
             @endif
 
-            {{-- Form kirim balasan --}}
+            <!-- Form kirim balasan -->
             <form action="{{ route('admin.pengaduan.balas', $pengaduan->id) }}" method="POST" class="mt-3">
                 @csrf
                 <div class="mb-3">
