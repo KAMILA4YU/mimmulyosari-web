@@ -34,7 +34,9 @@ class PpdbController extends Controller
     {
         $request->validate([
     'nama_lengkap' => 'required',
-    'nik'          => 'required',
+
+    'nik' => 'required|digits:16|unique:ppdbs,nik',
+
     'tempat_lahir' => 'required',
     'tanggal_lahir'=> 'required',
     'jenis_kelamin'=> 'required',
@@ -54,6 +56,12 @@ class PpdbController extends Controller
 
     // KONDISIONAL
     'surat_pindahan' => 'required_if:status_siswa,pindahan|file|mimes:jpg,jpeg,png,pdf|max:25600',
+
+    // NIK
+    ], [
+    'nik.required' => 'NIK wajib diisi.',
+    'nik.digits'  => 'NIK harus terdiri dari 16 digit.',
+    'nik.unique'  => 'NIK sudah terdaftar. Silakan gunakan NIK lain atau hubungi admin.',
 ]);
 
         // Upload helper
